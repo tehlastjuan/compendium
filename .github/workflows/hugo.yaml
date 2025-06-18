@@ -50,7 +50,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           cache: npm
-          run: "npm ci && npm test"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
