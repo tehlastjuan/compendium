@@ -47,11 +47,10 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.9.1
         with:
           cache: npm
-          cache-dependency-path: "**/package-lock.json"
-          run: "npm rebuild"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
