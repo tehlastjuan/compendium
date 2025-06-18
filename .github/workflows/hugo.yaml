@@ -50,7 +50,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           cache: npm
-          cache-dependency-path: themes/docsy/package-lock.json
+          cache-dependency-path: "**/package-lock.json"
+          run: "npm rebuild"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
