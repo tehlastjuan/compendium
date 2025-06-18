@@ -17,7 +17,7 @@ pygmentsStyle = "tango"
 #     dir = ":cacheDir/images"
 
 [module]
-  #replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
+  replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
   [module.hugoVersion]
     extended = true
     min = "0.112.0"
