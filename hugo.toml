@@ -1,7 +1,6 @@
 baseURL = "/"
 title = ""
 defaultContentLanguage = "en"
-theme = "docsy"
 
 enableRobotsTXT = true
 enableGitInfo = true
@@ -19,9 +18,12 @@ pygmentsStyle = "tango"
     dir = ":cacheDir/images"
 
 [module]
+  replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
   [module.hugoVersion]
     extended = true
     min = "0.112.0"
+  [[module.imports]]
+    path = "docsy"
   [[module.mounts]]
     source = "content"
     target = "content"
@@ -65,8 +67,8 @@ pygmentsStyle = "tango"
   #search = algolia
 
   [params.copyright]
-    authors =  "Docsy Authors | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0)"
-    from_year = 2018
+    authors =  "Rollspelspoolen | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0)"
+    from_year = 2017
 
   [params.taxonomy]
     # set taxonomyCloud = [] to hide taxonomy clouds
@@ -85,11 +87,6 @@ pygmentsStyle = "tango"
     sidebar_menu_compact = true
     sidebar_menu_foldable = true
     sidebar_search_disable = false
-
-    [params.ui.feedback]
-      enable = false
-      "yes" = 'Glad to hear it! Please <a href="https://github.com/google/docsy/issues/new">tell us how we can improve</a>.'
-      "no" = 'Sorry to hear that. Please <a href="https://github.com/google/docsy/issues/new">tell us how we can improve</a>.'
 
     [params.ui.readingtime]
       enable = false
