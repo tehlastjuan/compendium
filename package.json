@@ -2,13 +2,16 @@
   "name": "compendium",
   "version": "1.0.0",
   "description": "Rollspelspoolen Compendium",
-  "homepage": "https://github.com/tehlastjuan/compendium#readme",
+  "homepage": "https://github.com/tehlastjuan/compendium",
   "bugs": {
     "url": "https://github.com/tehlastjuan/compendium/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tehlastjuan/compendium.git"
+  },
+  "scripts": {
+    "update:dep": "npm install --save-dev autoprefixer@latest postcss-cli@latest"
   },
   "license": "MIT",
   "author": "tehlastjuan",
