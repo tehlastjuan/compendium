@@ -36,15 +36,6 @@ jobs:
       HUGO_ENVIRONMENT: production
       TZ: Europe/Stockholm
     steps:
-      ## setup node
-      - name: Set up Node
-        uses: actions/setup-node@v4
-      ## install postcss
-      - name: Install npm packages
-        run: |
-          npm install --save-dev autoprefixer
-          npm install --save-dev postcss-cli
-          npm install -D postcss
       ## hugo-cli
       - name: Install Hugo CLI
         run: |
@@ -63,9 +54,19 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      ## setup node
+      - name: Set up Node
+        uses: actions/setup-node@v4
+      ## install postcss
+      - name: Install npm packages
+        run: |
+          [[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true
+          npm install --save-dev autoprefixer
+          npm install --save-dev postcss-cli
+          npm install -D postcss
       ## dart-sass
-      - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      # - name: Install Node.js dependencies
+      #   run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       ## dart-sass
       - name: Build with Hugo
         run: |
