@@ -16,20 +16,6 @@ pygmentsStyle = "tango"
 #   [caches.images]
 #     dir = ":cacheDir/images"
 
-[module]
-  #replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
-  [module.hugoVersion]
-    extended = true
-    min = "0.146.0"
-  [[module.imports]]
-    path = "docsy"
-  [[module.imports]]
-    path = "github.com/FortAwesome/Font-Awesome"
-  [[module.imports]]
-    path = "github.com/twbs/bootstrap"
-  [[module.mounts]]
-    source = "content"
-    target = "content"
 
 [outputs]
   section = ["HTML", "RSS", "print"]
@@ -61,11 +47,12 @@ pygmentsStyle = "tango"
   #github_repo = "https://github.com/google/docsy"
   #github_project_repo = "https://github.com/google/docsy"
   #github_subdir = "userguide"
-  #time_format_blog = "Monday, January 02, 2006"
+  time_format_blog = "Monday, January 02, 2006"
   time_format_default = "January 2, 2006"
   offlineSearch = false
-  #offlineSearchSummaryLength = 70
+  offlineSearchSummaryLength = 20
   offlineSearchMaxResults = 10
+  rss_sections = ['blog']
   #prism_syntax_highlighting = false
   #search = algolia
 
@@ -105,3 +92,87 @@ pygmentsStyle = "tango"
     enable = true
   [params.drawio]
     enable = true
+
+# Docsy config
+
+[outputFormats.PRINT]
+  baseName = "index"
+  isHTML = true
+  mediaType = "text/html"
+  path = "_print"
+  permalinkable = false
+
+[module]
+  # replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
+  [module.hugoVersion]
+    extended = true
+    min = "0.146.0"
+
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "node_modules/bootstrap"
+    target = "assets/vendor/bootstrap"
+  [[module.mounts]]
+    source = "node_modules/@fortawesome/fontawesome-free"
+    target = "assets/vendor/Font-Awesome"
+  [[module.mounts]]
+    source = "i18n"
+    target = "i18n"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "node_modules/@fortawesome/fontawesome-free/webfonts"
+    target = "static/webfonts"
+
+  # if using npm
+  # [[module.mounts]]
+  #   source = "../../node_modules/bootstrap"
+  #   target = "assets/vendor/bootstrap"
+  # [[module.mounts]]
+  #   source = "../../node_modules/@fortawesome/fontawesome-free"
+  #   target = "assets/vendor/Font-Awesome"
+  # [[module.mounts]]
+  #   source = "../../node_modules/@fortawesome/fontawesome-free/webfonts"
+  #   target = "static/webfonts"
+
+  # bug fix
+  [[module.mounts]]
+    source = "assets/_vendor/bootstrap/scss"
+    target = "assets/vendor/bootstrap/scss/vendor"
+
+  # imports
+  [[module.imports]]
+    path = "github.com/twbs/bootstrap"
+    disable = false
+  [[module.imports.mounts]]
+    source = "scss"
+    target = "assets/vendor/bootstrap/scss"
+  [[module.imports.mounts]]
+    source = "dist/js"
+    target = "assets/vendor/bootstrap/dist/js"
+
+  [[module.imports]]
+    path = "github.com/FortAwesome/Font-Awesome"
+    disable = false
+  [[module.imports.mounts]]
+    source = "scss"
+    target = "assets/vendor/Font-Awesome/scss"
+  [[module.imports.mounts]]
+    source = "webfonts"
+    target = "static/webfonts"
+
+  # [[module.imports]]
+  #   path = "docsy"
+
