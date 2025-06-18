@@ -1,11 +1,10 @@
-baseURL = "/"
-title = ""
+baseURL = "https://compendium.github.io/"
+title = "Rollspellspoolen Compendium"
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true
 enableGitInfo = true
 contentDir = "content/en"
-#ignoreLogs = ['warning-frontmatter-params-overrides', 'warning-goldmark-raw-html']
 
 # Highlighting config
 pygmentsCodeFences = true
@@ -13,12 +12,12 @@ pygmentsUseClasses = false
 pygmentsUseClassic = false
 pygmentsStyle = "tango"
 
-[caches]
-  [caches.images]
-    dir = ":cacheDir/images"
+# [caches]
+#   [caches.images]
+#     dir = ":cacheDir/images"
 
 [module]
-  replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
+  #replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
   [module.hugoVersion]
     extended = true
     min = "0.112.0"
