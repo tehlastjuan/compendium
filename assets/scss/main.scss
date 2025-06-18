@@ -1,8 +1,8 @@
 @import "../vendor/bootstrap/scss/functions";
 
-@import "variables_forward";
-@import "variables_project";
 @import "variables";
+@import "variables_fonts";
+@import "variables_project";
 @import "support/mixins";
 
 @import "../vendor/bootstrap/scss/bootstrap";

@@ -4,7 +4,6 @@ defaultContentLanguage = "en"
 
 enableRobotsTXT = true
 enableGitInfo = true
-contentDir = "content/en"
 
 # Highlighting config
 pygmentsCodeFences = true
@@ -15,7 +14,6 @@ pygmentsStyle = "tango"
 # [caches]
 #   [caches.images]
 #     dir = ":cacheDir/images"
-
 
 [outputs]
   section = ["HTML", "RSS", "print"]
@@ -46,10 +44,9 @@ pygmentsStyle = "tango"
   #url_latest_version = "https://example.com"
   #github_repo = "https://github.com/google/docsy"
   #github_project_repo = "https://github.com/google/docsy"
-  #github_subdir = "userguide"
   time_format_blog = "Monday, January 02, 2006"
   time_format_default = "January 2, 2006"
-  offlineSearch = false
+  offlineSearch = true
   offlineSearchSummaryLength = 20
   offlineSearchMaxResults = 10
   rss_sections = ['blog']
@@ -107,7 +104,6 @@ pygmentsStyle = "tango"
   [module.hugoVersion]
     extended = true
     min = "0.146.0"
-
   [[module.mounts]]
     source = "content"
     target = "content"
@@ -172,7 +168,4 @@ pygmentsStyle = "tango"
   [[module.imports.mounts]]
     source = "webfonts"
     target = "static/webfonts"
-
-  # [[module.imports]]
-  #   path = "docsy"
 
