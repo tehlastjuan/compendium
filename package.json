@@ -1,0 +1,22 @@
+{
+  "name": "compendium",
+  "version": "1.0.0",
+  "description": "Rollspelspoolen Compendium",
+  "homepage": "https://github.com/tehlastjuan/compendium#readme",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tehlastjuan/compendium/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tehlastjuan/compendium.git"
+  },
+  "author": "tehlastjuan",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "autoprefix": "^1.0.1",
+    "postcss-cli": "^11.0.1"
+  }
+}
