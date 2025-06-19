@@ -1,13 +1,14 @@
 // Style alert boxes.
 
 .alert {
-  font-weight: $font-weight-medium;
+  font-weight: $font-size-base;
   color: inherit;
   border-radius: 0;
 
   @each $color, $value in $theme-colors {
     &-#{$color} {
       & .alert-heading {
+        font-weight: $font-weight-bold;
         color: $value;
       }
 

@@ -1,0 +1,32 @@
+.td-card-group.card-group {
+  @extend .td-max-width-on-larger-screens;
+}
+
+.td-stats-card {
+  &.card {
+    @extend .td-max-width-on-larger-screens;
+  }
+
+  .card-header,
+  [data-bs-theme='light'] {
+    background-color: $cm-paper-100;
+    //background-color: $card-cap-bg;
+
+    & h4 {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .card-body,
+  [data-bs-theme='light'] {
+    &.stats {
+      background-color: $cm-blockq-color;
+      //background-color: $card-bg;
+      padding: 0 0 0 1ex;
+    }
+    & p {
+      margin-bottom: 0;
+    }
+  }
+
+}

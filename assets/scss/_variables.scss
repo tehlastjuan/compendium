@@ -1,6 +1,6 @@
 // Forward declarations of variables used by _variables.scss and
 // _variables_project.scss.
-//
+
 // TODO(@chalin): autogenerate the content of this file
 
 // Bootstrap SASS variables:
@@ -28,17 +28,83 @@ $enable-shadows: true !default;
 
 // Theme colors
 
+$cm-paper-000: #eee5ce; 
+$cm-paper-100: #ded5be;
+$cm-paper-200: #cec5ae;
+$cm-paper-300: #beb59e;
+$cm-paper-400: #aea58e;
+$cm-paper-500: #9e957e;
+$cm-paper-600: #8e856e;
+
+$cm-tables-000: #e0e5c1;
+$cm-tables-100: #e0e5c1;
+$cm-tables-200: #e0e5c1;
+$cm-tables-300: #e0e5c1;
+$cm-tables-400: #e0e5c1;
+$cm-tables-500: #e0e5c1;
+$cm-tables-600: #e0e5c1;
+
+//$cm-ink-000: #020202;
+//$cm-ink-100: #222222;
+//$cm-ink-200: #424242;
+//$cm-ink-300: #626262;
+//$cm-ink-400: #828282;
+//$cm-ink-500: #a2a2a2;
+//$cm-ink-600: #b2b2b2;
+
+$cm-ink-000: #0e121a;
+$cm-ink-100: #1e222a;
+$cm-ink-200: #2e323a;
+$cm-ink-300: #3e424a;
+$cm-ink-400: #4e525a;
+$cm-ink-500: #5e626a;
+$cm-ink-600: #6e727a;
+
+$cm-headings-000: #88483d;
+$cm-headings-100: #78382d;
+$cm-headings-200: #68281d;
+$cm-headings-300: #58180d;
+$cm-headings-400: #48080b;
+$cm-headings-500: #380609;
+$cm-headings-600: #280407;
+
+$cm-headings-dark-000: #48a8bd;
+$cm-headings-dark-100: #3494a4;
+$cm-headings-dark-200: #248494;
+$cm-headings-dark-300: #147484;
+$cm-headings-dark-400: #046474;
+$cm-headings-dark-500: #025464;
+$cm-headings-dark-600: #004454;
+
+$cm-desc-color: #faf7ea;
+$cm-gold-color: #c9ad6a;
+
+
+$cm-fore-color: $cm-paper-000;
+$cm-back-color: $cm-ink-100;
+
+$cm-heads-color: $cm-headings-300;
+$cm-heads-color-dark: $cm-headings-dark-200;
+
+$cm-tables-color: $cm-tables-000;
+$cm-tables-color-dark: $cm-tables-000;
+
+$cm-blockq-color: #fdf1dc;
+$cm-blockq-color-dark: #888888;
+
+
+
 // TODO: consider moving all of these theme-color definitions into the User
 // Guide SCSS, or declare theme here, but namespaced:
 
-$primary: #30638e !default;
-$secondary: #ffa630 !default;
-$success: #3772ff !default;
-$info: #c0e0de !default;
-$warning: #ed6a5a !default;
-$danger: #ed6a5a !default;
-$light: #d3f3ee !default; // TODO: consider using BS value
-$dark: #403f4c !default; // TODO: consider using BS value
+$primary:   $cm-ink-000 !default; // #30638e !default;
+$secondary: $cm-headings-dark-100 !default; // #ffa630 !default;
+$success:   $cm-headings-dark-100 !default; // #3772ff !default;
+$info:      $cm-headings-dark-100 !default; // #c0e0de !default;
+$warning:   $cm-headings-dark-100 !default; // #ed6a5a !default;
+$danger:    $cm-headings-dark-100 !default; // #ed6a5a !default;
+$light:     $cm-headings-dark-100 !default; // #d3f3ee !default; 
+$dark:      $cm-headings-dark-100 !default; // #403f4c !default;
 
 $code-color: shade-color($secondary, 40%) !default;
 
@@ -61,3 +127,28 @@ $td-box-colors:
 $link-color: $blue-500 !default;
 $link-shade-percentage: 30% !default;
 
+$body-fg: $cm-back-color;
+$body-bg: $cm-fore-color;
+
+$body-bg-dark: $cm-back-color;
+$body-fg-dark: $cm-fore-color;
+
+$headings-color: $cm-heads-color; 
+$headings-color-dark: $cm-heads-color-dark;
+
+$border-color: $cm-paper-000;
+$border-color-dark: $cm-ink-100;
+
+.card,
+[data-bs-theme='light'] {
+  $card-bg: $cm-blockq-color;
+  $card-cap-bg: $cm-paper-100;
+  $card-cap-color: $cm-heads-color;
+}
+
+:root,
+[data-bs-theme='dark'] {
+  //$card-bg-dark: $cm-blockq-color;
+  //$card-cap-bg-dark: $cm-ink-100;
+  //$card-cap-color-dark: $cm-heads-color-dark;
+}

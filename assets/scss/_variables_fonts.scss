@@ -71,31 +71,55 @@
 	src : url('../fonts/5e/scaly_sans_italic.woff2');
 }
 
-// Font defaults
-
+// Fonts defaults
 $td-fonts-serif:
   -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
   Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
+// Bootstrap fonts vars
 $font-family-sans-serif: $td-fonts-serif !default; // TODO: consider moving into UG SCSS or namespace the var (td-)
 
 $font-family-monospace:
   SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
   monospace !default; // TODO: consider moving into UG SCSS or namespace the var (td-)
 
-$font-family-base: $font-family-sans-serif !default; // TODO: consider moving into UG SCSS or namespace the var (td-)
+// Font icons
+$font-awesome-font-name: 'Font Awesome 6 Free' !default;
+// $font-nerd-icons: '' !default; //  TODO: add dnd icons here
+
+// Google fonts
+$td-enable-google-fonts: false !default;
+$google_font_name: 'Open Sans' !default;
+$google_font_family: 'Open+Sans:300,300i,400,400i,700,700i' !default;
+$web-font-path: 'https://fonts.googleapis.com/css?family=#{$google_font_family}&display=swap';
+
+@if $td-enable-google-fonts {
+  $td-fonts-serif: join('#{$google_font_name}', $td-fonts-serif);
+}
+
+// Project fonts
+$font-family-base: join('#{insanity}', $td-fonts-serif) !default;
+$font-family-headings: join('#{mreaves}', $td-fonts-serif) !default;
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: join('#{mreaves}', $td-fonts-serif);
+  font-family: $font-family-headings;
 }
 
-p {
-  font-family: join('#{insanity}', $td-fonts-serif);
-}
-
-// Base sizes
+// Base font/spacing sizes
 $font-size-base: 1.115rem !default;
 $spacer: 1rem !default;
+
+// Headings
+$h1-font-size: $font-size-base * 2 !default;
+$h2-font-size: $font-size-base * 1.650 !default;
+$h3-font-size: $font-size-base * 1.475 !default; // TODO: consider using BS default (* 1.75), or moving into UG SCSS
+$h4-font-size: $font-size-base * 1.325 !default; // TODO: consider using BS default (* 1.5), or moving into UG SCSS
+$h5-font-size: $font-size-base * 1.125 !default; // TODO: consider using BS default (* 1.25), or moving into UG SCSS
+$h6-font-size: $font-size-base * 1.115 !default;
+
+// Space
+$td-block-space-top-base: 4 * $spacer !default;
+$td-block-space-bottom-base: 4 * $spacer !default;
 
 // Font weights
 $font-weight-normal: 400 !default;
@@ -103,37 +127,9 @@ $font-weight-medium: 500 !default;
 $font-weight-bold: 600 !default;
 $font-weight-body-text: $font-weight-normal !default;
 
-$td-enable-google-fonts: false !default;
-
-$google_font_name: 'Open Sans' !default;
-$google_font_family: 'Open+Sans:300,300i,400,400i,700,700i' !default;
-$web-font-path: 'https://fonts.googleapis.com/css?family=#{$google_font_family}&display=swap';
-
-$font-awesome-font-name: 'Font Awesome 6 Free' !default;
-
-@if $td-enable-google-fonts {
-  $td-fonts-serif: join('#{$google_font_name}', $td-fonts-serif);
-}
-
-// Heading sizes
-
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 1.75 !default;
-$h3-font-size: $font-size-base * 1.475 !default; // TODO: consider using BS default (* 1.75), or moving into UG SCSS
-$h4-font-size: $font-size-base * 1.325 !default; // TODO: consider using BS default (* 1.5), or moving into UG SCSS
-$h5-font-size: $font-size-base * 1.225 !default; // TODO: consider using BS default (* 1.25), or moving into UG SCSS
-$h6-font-size: $font-size-base * 1.125 !default;
-
-// Space
-
-$td-block-space-top-base: 4 * $spacer !default;
-$td-block-space-bottom-base: 4 * $spacer !default;
-
 // Pagination
-
 $pagination-color: $gray-600 !default; // TODO: consider using BS default
 $pagination-disabled-color: $gray-300 !default; // TODO: consider using BS default
 
 // Footer
-
 $list-inline-padding: $spacer;

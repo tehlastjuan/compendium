@@ -7,13 +7,17 @@ categories: ["Playable Species", "Basic Species", "Species"]
 tags: ["Humanoid", "PBH24"]
 ---
 
-### Halfling \- PBH24 S
-
-> **Rarity:** Common  
-> **Creature type:** Humanoid  
-> **Size:** Small (about 2-3 feet tall)  
-> **Speed:** 30 feet  
-> **Ability Score Increase:** \+ 1 Dexterity or \+ 1 Wisdom
+{{< stats
+  species="Halfling"
+  book="PBH24"
+  page="23"
+  rarity="Common"
+  type="Humanoid"
+  size="Small (about 2-3 feet tall)"
+  speed="30 feet"
+  ability="\+ 1 Dexterity or \+ 1 Wisdom"
+  link="#"
+>}}
 
 **_Brave._** You have Advantage on saving throws you make to avoid or end the frightened condition.
 

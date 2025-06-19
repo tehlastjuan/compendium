@@ -32,8 +32,8 @@
     "update:pkgs": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "bootstrap": "5.3.6",
-    "@fortawesome/fontawesome-free": "6.7.2"
+    "@fortawesome/fontawesome-free": "6.7.2",
+    "bootstrap": "5.3.6"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
@@ -41,7 +41,9 @@
     "hugo-extended": "0.147.5",
     "npm-check-updates": "^18.0.1",
     "postcss-cli": "^11.0.1",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "prettier-plugin-toml": "^2.0.5",
+    "prettier-plugin-go-template": "^0.0.15"
   },
   "engines": {
     "node": ">=20"
