@@ -36,45 +36,42 @@ jobs:
       HUGO_ENVIRONMENT: production
       TZ: Europe/Stockholm
     steps:
-      ## hugo-cli
+      ## [x] hugo-cli
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-      ## dart-sass
+      ## [x] dart-sass
       - name: Install Dart Sass
         run: sudo snap install dart-sass
-      ## checkout
+      ## [x] branch checkout
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
-      ## pages setup
+      ## [x] hugo pages setup
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      ## setup node
+      ## [x] node setup
       - name: Set up Node
         uses: actions/setup-node@v4
-      ## install postcss
+      ## [x] install postcss (!) and lesser packages
       - name: Install npm packages
         run: |
           [[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true
           npm install --save-dev autoprefixer
           npm install --save-dev postcss-cli
           npm install -D postcss
-      ## dart-sass
-      # - name: Install Node.js dependencies
-      #   run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      ## dart-sass
+      ## [x] gen content
       - name: Build with Hugo
         run: |
           hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-      ## upload gen pages
+      ## [x] upload content
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
