@@ -14,15 +14,14 @@ tags:
 ---
 
 {{< stats
-  species="Dragonborn"
   book="PBH24"
   page="23"
+  link="#"
   rarity="Rare"
   type="Humanoid"
   size="Medium (about 5-7 feet tall)"
   speed="30 feet"
   ability="\+ 1 Strength or \+ 1 stat determined by your **_Draconic Ancestry._**"
-  link="#"
 >}}
 
 #### Draconic Ancestry

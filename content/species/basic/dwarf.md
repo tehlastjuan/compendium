@@ -1,19 +1,28 @@
 ---
 weight: 2000
-linkTitle: "Dwarf"
-title: "Dwarf"
-description: "Everything you need to know about playable Dwarf."
-categories: ["Playable Species", "Basic Species", "Species"]
-tags: ["Humanoid", "PBH24"]
+linkTitle: Dwarf
+title: Dwarf
+titleIcon: fa-solid fa-icons
+description: Everything you need to know about playable Dwarf.
+categories:
+  - Playable Species
+  - Basic Species
+  - Species
+tags:
+  - Humanoid
+  - PBH24
 ---
 
-### Dwarf \- PBH24 S
-
-> **Rarity:** Common  
-> **Creature type:** Humanoid  
-> **Size:** Medium (about 4-5 feet tall)  
-> **Speed:** 30 feet  
-> **Ability Score Increase:** \+ 1 Constitution or \+ 1 Wisdom  
+{{< stats
+  book="PBH24"
+  page="23"
+  link="#"
+  rarity="Rare"
+  type="Humanoid"
+  size="Medium (about 4-5 feet tall)"
+  speed="30 feet"
+  ability="\+ 1 Constitution or \+ 1 Wisdom."
+>}}
 
 **_Darkvision._** You have 120 feet range Darkvision.  
 
@@ -31,3 +40,4 @@ You can use this bonus action a number of times equal to your Proficiency Bonus,
 You must consume a total value of 5 silver pieces material to receive the benefits of a full meal, and for every gold piece of value you consume as food during a Short or Long rest, you gain 1 temporary hit point (up to a maximum of 5 times your Proficiency Bonus).
 
 You can still eat normal food and still need to drink.
+

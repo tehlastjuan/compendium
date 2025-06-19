@@ -1,12 +1,15 @@
 ---
 weight: 7000
-linkTitle: "Human"
-title: "Human"
-description: "Everything you need to know about playable Human."
-categories: ["Playable Species", "Basic Species", "Species"]
-tags: ["Humanoid", "PBH24"]
+linkTitle: Human
+title: Human
+description: Everything you need to know about playable Human.
+book: PBH24
+categories:
+  - Playable Species
+  - Basic Species
+  - Species
+tags: Humanoid
 ---
-
 ### Human \- PBH24 S
 
 > **Rarity:** Common  
@@ -20,3 +23,4 @@ tags: ["Humanoid", "PBH24"]
 **_Skillful._** You gain proficiency in one skill of your choice.
 
 **_Versatile._** You gain an Origin feat of your choice.
+

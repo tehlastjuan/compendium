@@ -1,33 +1,29 @@
-{{ $species := cond (.IsNamedParams) (.Get "species") (.Get 0) }}
-{{ $book := cond (.IsNamedParams) (.Get "book") (.Get 1) }}
-{{ $page := cond (.IsNamedParams) (.Get "page") (.Get 2) }}
+{{ $book := cond (.IsNamedParams) (.Get "book") (.Get 0) }}
+{{ $page := cond (.IsNamedParams) (.Get "page") (.Get 1) }}
+{{ $link := cond (.IsNamedParams) (.Get "link") (.Get 2) }}
 {{ $rarity := cond (.IsNamedParams) (.Get "rarity") (.Get 3) }}
 {{ $type := cond (.IsNamedParams) (.Get "type") (.Get 4) }}
 {{ $size := cond (.IsNamedParams) (.Get "size") (.Get 5) }}
 {{ $speed := cond (.IsNamedParams) (.Get "speed") (.Get 6) }}
 {{ $ability := cond (.IsNamedParams) (.Get "ability") (.Get 7) }}
-{{ $link := cond (.IsNamedParams) (.Get "link") (.Get 8) }}
+{{ $species := .Page.Title -}}
 {{ if $species -}}
-  <div class="td-stats-card card border-0 me-4 mb-4">
-    <div class="card-header p-0 m-0 pt-2 row justify-content-between">
-      <h4 class="card-title col-auto">{{ .Params.species }}</h4>
-      {{ if .Params.book -}}
-        <a href="{{ $link }}" class="card-link col-auto"
-          >{{ .Params.book }} s.{{ .Params.page }}</a
-        >
-      {{ end -}}
-    </div>
-    <div class="card-body">
-      <p class="card-text stats">
-        <strong>Rarity:</strong> {{ .Params.rarity }}
-      </p>
-      <p class="card-text stats"><strong>Type:</strong> {{ .Params.type }}</p>
-      <p class="card-text stats"><strong>Size:</strong> {{ .Params.size }}</p>
-      <p class="card-text stats"><strong>Speed:</strong> {{ .Params.speed }}</p>
-      {{ with .Params.ability -}}
-        <p class="card-text stats"><strong>Ability Score Increase:</strong></p>
-        <span class="card-text ">{{ . | markdownify }}</span>
-      {{ end -}}
-    </div>
+<div class="td-stats-card card border-0 me-4 mb-4">
+  <div class="card-header p-0 m-0 pt-2 row justify-content-between">
+    <h4 class="card-title col-auto">{{ $species }}</h4>
+    {{ if $book -}}
+      <a href="{{ $link }}" class="card-link col-auto">{{ $book }} s.{{ $page }}</a>
+    {{ end -}}
   </div>
+  <div class="card-body">
+    <p class="card-text stats"><strong>Rarity:</strong> {{ $rarity }}</p>
+    <p class="card-text stats"><strong>Type:</strong> {{ $type }}</p>
+    <p class="card-text stats"><strong>Size:</strong> {{ $size }}</p>
+    <p class="card-text stats"><strong>Speed:</strong> {{ $speed }}</p>
+    {{ with .Params.ability -}}
+      <p class="card-text stats"><strong>Ability Score Increase:</strong></p>
+    <span class="card-text ">{{ . | markdownify }}</span>
+    {{ end -}}
+  </div>
+</div>
 {{ end -}}
