@@ -27,11 +27,14 @@ pygmentsStyle = "tango"
   defaultMarkdownHandler = "goldmark"
   [markup.highlight]
     noClasses = false
-  [markup.goldmark.parser.attribute]
-    block = true
-  [markup.goldmark.renderer]
-    unsafe = true
-
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+  
 [taxonomies]
   category = "categories"
   tag = "tags"

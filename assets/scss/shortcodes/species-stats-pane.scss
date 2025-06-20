@@ -7,26 +7,43 @@
     @extend .td-max-width-on-larger-screens;
   }
 
-  .card-header,
-  [data-bs-theme='light'] {
-    background-color: $cm-paper-100;
-    //background-color: $card-cap-bg;
+  .card-header {
+    background-color: $card-stats-cap-bg;
+    border-bottom: none;
 
     & h4 {
+      color: $card-stats-cap-color;
       font-weight: $font-weight-bold;
     }
   }
 
-  .card-body,
-  [data-bs-theme='light'] {
+  .card-body {
+    background-color: $card-stats-bg;
+    //@if $color-mode-type == dark {
+    //  background-color: $card-stats-bg-dark;
+    //}
+
     &.stats {
-      background-color: $cm-blockq-color;
-      //background-color: $card-bg;
       padding: 0 0 0 1ex;
     }
+
     & p {
       margin-bottom: 0;
     }
   }
+}
 
+@include color-mode(dark) {
+  .td-stats-card {
+    .card-header {
+      background-color: $card-stats-cap-bg-dark;
+
+      & h4 {
+        color: $card-stats-cap-color-dark;
+      }
+    }
+    .card-body {
+      background-color: $card-stats-bg-dark;
+    }
+  }
 }

@@ -2,6 +2,7 @@
 weight: 7000
 linkTitle: Human
 title: Human
+titleIcon: fa-solid fa-icons
 description: Everything you need to know about playable Human.
 book: PBH24
 categories:

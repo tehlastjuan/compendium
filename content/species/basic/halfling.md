@@ -2,6 +2,7 @@
 weight: 6000
 linkTitle: Halfling
 title: Halfling
+titleIcon: fa-solid fa-icons
 description: Everything you need to know about playable Halfling.
 categories:
   - Playable Species

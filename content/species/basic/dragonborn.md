@@ -4,10 +4,6 @@ linkTitle: Dragonborn
 title: Dragonborn
 titleIcon: fa-solid fa-icons
 description: Everything you need to know about playable Dragonborn.
-categories:
-  - Playable Species
-  - Basic Species
-  - Species
 tags:
   - Humanoid
   - PBH24

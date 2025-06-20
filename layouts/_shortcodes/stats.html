@@ -8,22 +8,22 @@
 {{ $ability := cond (.IsNamedParams) (.Get "ability") (.Get 7) }}
 {{ $species := .Page.Title -}}
 {{ if $species -}}
-<div class="td-stats-card card border-0 me-4 mb-4">
-  <div class="card-header p-0 m-0 pt-2 row justify-content-between">
-    <h4 class="card-title col-auto">{{ $species }}</h4>
-    {{ if $book -}}
-      <a href="{{ $link }}" class="card-link col-auto">{{ $book }} s.{{ $page }}</a>
-    {{ end -}}
+  <div class="td-stats-card card border-0 me-4 mb-4">
+    <div class="card-header p-0 m-0 pt-2 row justify-content-between">
+      <h4 class="card-title col-auto">{{ $species }}</h4>
+      {{ if $book -}}
+        <a href="{{ $link }}" class="card-link col-auto">{{ $book }} s.{{ $page }}</a>
+      {{ end -}}
+    </div>
+    <div class="card-body">
+      <p class="card-text stats"><strong>Rarity:</strong> {{ $rarity }}</p>
+      <p class="card-text stats"><strong>Type:</strong> {{ $type }}</p>
+      <p class="card-text stats"><strong>Size:</strong> {{ $size }}</p>
+      <p class="card-text stats"><strong>Speed:</strong> {{ $speed }}</p>
+      {{ with .Params.ability -}}
+        <p class="card-text stats"><strong>Ability Score Increase:</strong></p>
+        <span class="card-text ">{{ . | markdownify }}</span>
+      {{ end -}}
+    </div>
   </div>
-  <div class="card-body">
-    <p class="card-text stats"><strong>Rarity:</strong> {{ $rarity }}</p>
-    <p class="card-text stats"><strong>Type:</strong> {{ $type }}</p>
-    <p class="card-text stats"><strong>Size:</strong> {{ $size }}</p>
-    <p class="card-text stats"><strong>Speed:</strong> {{ $speed }}</p>
-    {{ with .Params.ability -}}
-      <p class="card-text stats"><strong>Ability Score Increase:</strong></p>
-    <span class="card-text ">{{ . | markdownify }}</span>
-    {{ end -}}
-  </div>
-</div>
 {{ end -}}

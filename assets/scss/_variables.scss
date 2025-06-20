@@ -98,13 +98,21 @@ $cm-blockq-color-dark: #888888;
 // Guide SCSS, or declare theme here, but namespaced:
 
 $primary:   $cm-ink-000 !default; // #30638e !default;
-$secondary: $cm-headings-dark-100 !default; // #ffa630 !default;
+$secondary: $cm-gold-color !default; // #ffa630 !default;
 $success:   $cm-headings-dark-100 !default; // #3772ff !default;
 $info:      $cm-headings-dark-100 !default; // #c0e0de !default;
 $warning:   $cm-headings-dark-100 !default; // #ed6a5a !default;
 $danger:    $cm-headings-dark-100 !default; // #ed6a5a !default;
 $light:     $cm-headings-dark-100 !default; // #d3f3ee !default; 
-$dark:      $cm-headings-dark-100 !default; // #403f4c !default;
+$dark:      $cm-ink-000 !default; // #403f4c !default;
+
+//$secondary: #ffa630 !default;
+//$success:   #3772ff !default;
+//$info:      #c0e0de !default;
+//$warning:   #ed6a5a !default;
+//$danger:    #ed6a5a !default;
+//$light:     #d3f3ee !default; 
+//$dark:      #403f4c !default;
 
 $code-color: shade-color($secondary, 40%) !default;
 
@@ -139,16 +147,13 @@ $headings-color-dark: $cm-heads-color-dark;
 $border-color: $cm-paper-000;
 $border-color-dark: $cm-ink-100;
 
-.card,
-[data-bs-theme='light'] {
-  $card-bg: $cm-blockq-color;
-  $card-cap-bg: $cm-paper-100;
-  $card-cap-color: $cm-heads-color;
-}
+$card-stats-cap-color: $cm-heads-color;
+$card-stats-cap-bg: $cm-paper-100;
+$card-stats-bg: $cm-blockq-color;
 
-:root,
-[data-bs-theme='dark'] {
-  //$card-bg-dark: $cm-blockq-color;
-  //$card-cap-bg-dark: $cm-ink-100;
-  //$card-cap-color-dark: $cm-heads-color-dark;
-}
+$card-stats-cap-color-dark: $cm-heads-color-dark;
+$card-stats-cap-bg-dark: $cm-ink-200;
+$card-stats-bg-dark: $cm-ink-000;
+
+
+

@@ -142,23 +142,20 @@
             $searchInput.data('offline-search-base-href') +
             r.ref.replace(/^\//, '');
 
-          const $entry = $('<div>').addClass('mt-4');
+          const $entry = $('<div>').addClass('cm-offline-search-result mt-3');
+
+          $entry.append(
+            $('<a>')
+              .addClass('d-block')
+              .attr('href', href)
+              .text(doc.title)
+          );
 
           $entry.append(
             $('<small>').addClass('d-block text-body-secondary').text(r.ref)
           );
 
-          $entry.append(
-            $('<a>')
-              .addClass('d-block')
-              .css({
-                fontSize: '1.2rem',
-              })
-              .attr('href', href)
-              .text(doc.title)
-          );
-
-          $entry.append($('<p>').text(doc.excerpt));
+          //$entry.append($('<p>').text(doc.excerpt));
 
           $searchResultBody.append($entry);
         });
