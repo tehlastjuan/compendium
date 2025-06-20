@@ -76,6 +76,9 @@ $cm-headings-dark-400: #046474;
 $cm-headings-dark-500: #025464;
 $cm-headings-dark-600: #004454;
 
+$cm-links-color: #0066ff;
+$cm-links-color-dark: #ff66ee;
+
 $cm-desc-color: #faf7ea;
 $cm-gold-color: #c9ad6a;
 
@@ -99,20 +102,18 @@ $cm-blockq-color-dark: #888888;
 
 $primary:   $cm-ink-000 !default; // #30638e !default;
 $secondary: $cm-gold-color !default; // #ffa630 !default;
-$success:   $cm-headings-dark-100 !default; // #3772ff !default;
-$info:      $cm-headings-dark-100 !default; // #c0e0de !default;
-$warning:   $cm-headings-dark-100 !default; // #ed6a5a !default;
-$danger:    $cm-headings-dark-100 !default; // #ed6a5a !default;
-$light:     $cm-headings-dark-100 !default; // #d3f3ee !default; 
+$success:   #3772ff !default;
+// $success:   $cm-headings-dark-100 !default; // #3772ff !default;
+$info:      #c0e0de !default;
+// $info:      $cm-headings-dark-100 !default; // #c0e0de !default;
+$warning:   #ed6a5a !default;
+// $warning:   $cm-headings-dark-100 !default; // #ed6a5a !default;
+$danger:    #ed6a5a !default;
+// $danger:    $cm-headings-dark-100 !default; // #ed6a5a !default;
+$light:     #d3f3ee !default; 
+// $light:     $cm-headings-dark-100 !default; // #d3f3ee !default; 
 $dark:      $cm-ink-000 !default; // #403f4c !default;
 
-//$secondary: #ffa630 !default;
-//$success:   #3772ff !default;
-//$info:      #c0e0de !default;
-//$warning:   #ed6a5a !default;
-//$danger:    #ed6a5a !default;
-//$light:     #d3f3ee !default; 
-//$dark:      #403f4c !default;
 
 $code-color: shade-color($secondary, 40%) !default;
 
@@ -141,8 +142,11 @@ $body-bg: $cm-fore-color;
 $body-bg-dark: $cm-back-color;
 $body-fg-dark: $cm-fore-color;
 
-$headings-color: $cm-heads-color; 
-$headings-color-dark: $cm-heads-color-dark;
+$headings-color: $cm-headings-000; 
+$headings-color-dark: $cm-headings-dark-000;
+
+$link-color: $cm-links-color;
+$link-color-dark: $cm-links-color-dark;
 
 $border-color: $cm-paper-000;
 $border-color-dark: $cm-ink-100;
